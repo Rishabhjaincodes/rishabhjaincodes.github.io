@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rishabh Jain — Software Engineer</title>
+<meta name="description" content="Rishabh Jain — B.Tech Computer Science student at VIT Vellore (CGPA 9.69/10) and incoming SWE Intern at American Express (Summer 2027). Backend, Android and full-stack engineering in Java, Python and JavaScript.">
+<meta name="author" content="Rishabh Jain">
+<link rel="canonical" href="https://rishabhjaincodes.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Rishabh Jain — Software Engineer">
+<meta property="og:description" content="B.Tech CSE at VIT Vellore. Incoming SWE Intern at American Express, Summer 2027. Backend, Android and full-stack projects in Java, Python and JavaScript.">
+<meta property="og:url" content="https://rishabhjaincodes.github.io/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2314463F'/><text x='50' y='68' font-family='Georgia,serif' font-size='52' font-weight='700' fill='%23F2F4F1' text-anchor='middle'>EG</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+<style>
+/* ─────────────────────────────────────────────
+   TOKENS
+   ───────────────────────────────────────────── */
+:root{
+  --paper:#F2F4F1;
+  --card:#FBFCFA;
+  --ink:#11161A;
+  --slate:#576169;
+  --rule:#DCE1DC;
+  --accent:#14463F;
+  --accent-soft:#E4EBE7;
+
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+
+  --gutter:clamp(1.25rem,5vw,4rem);
+  --max:1080px;
+  --meta-col:8.5rem;
+}
+
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0F1311;
+    --card:#151A18;
+    --ink:#ECEFEA;
+    --slate:#9AA5A0;
+    --rule:#252C29;
+    --accent:#7FC7B2;
+    --accent-soft:#1A2421;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:1.0625rem;
+  line-height:1.7;
+  font-synthesis-weight:none;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit}
+
+::selection{background:var(--accent);color:var(--paper)}
+
+:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--accent);color:var(--paper);
+  padding:.6rem 1rem;font-family:var(--mono);font-size:.8rem;
+}
+.skip:focus{left:0}
+
+.shell{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+
+/* ─────────────────────────────────────────────
+   NAV
+   ───────────────────────────────────────────── */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.topbar-in{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;height:60px;
+}
+.monogram{
+  font-family:var(--display);font-weight:700;font-size:1rem;
+  letter-spacing:.16em;text-decoration:none;
+}
+.monogram .dot{color:var(--accent)}
+
+.navlinks{display:flex;align-items:center;gap:clamp(.9rem,2.4vw,1.75rem)}
+.navlinks a{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;
+  text-transform:uppercase;text-decoration:none;color:var(--slate);
+  padding-bottom:2px;border-bottom:1px solid transparent;
+  transition:color .18s ease,border-color .18s ease;
+}
+.navlinks a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.navlinks a.resume{
+  color:var(--accent);border:1px solid var(--accent);
+  padding:.35rem .7rem;border-radius:2px;
+}
+.navlinks a.resume:hover{background:var(--accent);color:var(--paper)}
+.nav-hide{display:none}
+@media (min-width:680px){.nav-hide{display:inline}}
+
+/* ─────────────────────────────────────────────
+   HERO
+   ───────────────────────────────────────────── */
+.hero{padding:clamp(3.5rem,10vw,7rem) 0 clamp(2.5rem,6vw,4rem)}
+
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);
+  display:flex;align-items:center;gap:.6rem;margin-bottom:1.4rem;
+}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule);max-width:200px}
+
+.hero h1{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(2.5rem,7.5vw,4.25rem);
+  line-height:1.02;letter-spacing:-.035em;
+  margin-bottom:1.25rem;
+}
+.lede{
+  font-size:clamp(1.05rem,2.1vw,1.2rem);
+  color:var(--slate);max-width:60ch;margin-bottom:2.25rem;
+}
+.lede strong{color:var(--ink);font-weight:600}
+
+/* signature element: the spec rail */
+.spec{
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+}
+.spec div{
+  padding:.9rem 1.1rem .9rem 0;
+  border-right:1px solid var(--rule);
+}
+.spec div:last-child{border-right:0}
+.spec div + div{padding-left:1.1rem}
+.spec dt{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);margin-bottom:.3rem;
+}
+.spec dd{font-family:var(--display);font-weight:600;font-size:1rem;letter-spacing:-.01em}
+.spec dd .unit{color:var(--slate);font-weight:500;font-size:.82rem}
+
+.actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.btn{
+  font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;
+  text-transform:uppercase;text-decoration:none;
+  padding:.7rem 1.15rem;border:1px solid var(--rule);border-radius:2px;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn.primary{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.btn.primary:hover{opacity:.88}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary:hover{color:var(--paper)}
+
+/* ─────────────────────────────────────────────
+   SECTIONS — margin-annotation grid
+   ───────────────────────────────────────────── */
+.band{border-top:1px solid var(--rule);padding:clamp(3rem,7vw,4.75rem) 0}
+
+.band-grid{display:grid;gap:2rem}
+@media (min-width:880px){
+  .band-grid{grid-template-columns:var(--meta-col) 1fr;gap:3.5rem}
+}
+
+.band-meta{position:relative}
+@media (min-width:880px){
+  .band-meta{position:sticky;top:88px;align-self:start}
+}
+.band-meta h2{
+  font-family:var(--mono);font-size:.74rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
+  margin-bottom:.45rem;
+}
+.band-meta p{
+  font-family:var(--mono);font-size:.68rem;line-height:1.6;
+  color:var(--slate);letter-spacing:.04em;
+}
+
+/* ─────────────────────────────────────────────
+   PROJECTS
+   ───────────────────────────────────────────── */
+.work{display:grid;gap:1.25rem}
+
+.entry{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  padding:clamp(1.4rem,3vw,2rem);
+  transition:border-color .2s ease,transform .2s ease;
+}
+.entry:hover{border-color:var(--accent)}
+
+.entry-top{
+  display:flex;flex-wrap:wrap;align-items:baseline;
+  justify-content:space-between;gap:.5rem 1rem;margin-bottom:.35rem;
+}
+.entry h3{
+  font-family:var(--display);font-weight:600;font-size:1.3rem;
+  letter-spacing:-.015em;
+}
+.when{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--slate);white-space:nowrap;
+}
+.stackline{
+  font-family:var(--mono);font-size:.72rem;color:var(--accent);
+  letter-spacing:.02em;margin-bottom:1rem;
+}
+.entry ul{list-style:none;display:grid;gap:.55rem;margin-bottom:1.25rem}
+.entry li{position:relative;padding-left:1.05rem;color:var(--slate)}
+.entry li::before{
+  content:"";position:absolute;left:0;top:.72em;
+  width:5px;height:1px;background:var(--accent);
+}
+.entry li strong{color:var(--ink);font-weight:600}
+
+/* per-project datasheet strip */
+.readout{
+  display:flex;flex-wrap:wrap;
+  border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:.7rem;
+}
+.readout span{
+  padding:.6rem 1rem .6rem 0;color:var(--slate);
+  display:flex;gap:.45rem;align-items:baseline;
+}
+.readout span b{color:var(--ink);font-weight:500}
+
+.entry-links{display:flex;gap:1.25rem;margin-top:.9rem}
+.entry-links a{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+  text-transform:uppercase;text-decoration:none;color:var(--accent);
+  border-bottom:1px solid transparent;padding-bottom:1px;
+}
+.entry-links a:hover{border-bottom-color:var(--accent)}
+
+.archive{
+  margin-top:1.5rem;border-top:1px solid var(--rule);padding-top:1.1rem;
+  display:grid;gap:.65rem;
+}
+.archive-row{
+  display:flex;flex-wrap:wrap;gap:.3rem .85rem;align-items:baseline;
+  font-size:.95rem;color:var(--slate);
+}
+.archive-row a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+.archive-row a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+.archive-row .when{margin-left:auto}
+
+/* ─────────────────────────────────────────────
+   SKILLS
+   ───────────────────────────────────────────── */
+.stack{display:grid;gap:0;border-top:1px solid var(--rule)}
+.stack-row{
+  display:grid;gap:.3rem 1.5rem;
+  padding:1rem 0;border-bottom:1px solid var(--rule);
+}
+@media (min-width:620px){
+  .stack-row{grid-template-columns:11rem 1fr;align-items:baseline}
+}
+.stack-row dt{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--slate);
+}
+.stack-row dd{font-size:1rem}
+.stack-row dd em{font-style:normal;color:var(--slate)}
+
+/* ─────────────────────────────────────────────
+   EDUCATION / AWARDS
+   ───────────────────────────────────────────── */
+.edu{border-top:1px solid var(--rule)}
+.edu-row{padding:1.15rem 0;border-bottom:1px solid var(--rule)}
+.edu-row .entry-top{margin-bottom:.2rem}
+.edu-row h3{font-family:var(--display);font-weight:600;font-size:1.1rem}
+.edu-row p{color:var(--slate);font-size:.98rem}
+.marks{
+  display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;margin-top:.5rem;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--slate);
+}
+.marks b{color:var(--ink);font-weight:500}
+.coursework{
+  margin-top:1.25rem;font-size:.95rem;color:var(--slate);
+}
+.coursework b{
+  display:block;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--slate);
+  margin-bottom:.4rem;font-weight:400;
+}
+
+/* ─────────────────────────────────────────────
+   CONTACT
+   ───────────────────────────────────────────── */
+.contact h2{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(1.7rem,4.5vw,2.6rem);letter-spacing:-.025em;
+  margin-bottom:.9rem;
+}
+.contact p{color:var(--slate);max-width:52ch;margin-bottom:1.75rem}
+.channels{
+  display:grid;gap:0;border-top:1px solid var(--rule);max-width:34rem;
+}
+.channels a{
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:.85rem 0;border-bottom:1px solid var(--rule);
+  text-decoration:none;font-family:var(--mono);font-size:.78rem;
+  letter-spacing:.04em;transition:padding-left .18s ease,color .18s ease;
+}
+.channels a:hover{padding-left:.5rem;color:var(--accent)}
+.channels a .label{color:var(--slate);text-transform:uppercase;font-size:.68rem;letter-spacing:.14em}
+.channels a .val{overflow-wrap:anywhere;text-align:right}
+
+footer{
+  border-top:1px solid var(--rule);
+  padding:1.5rem 0 2.5rem;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;
+  color:var(--slate);
+  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
+}
+
+/* ─────────────────────────────────────────────
+   MOTION
+   ───────────────────────────────────────────── */
+.rise{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.rise.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rise{opacity:1;transform:none;transition:none}
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+}
+
+/* ─────────────────────────────────────────────
+   PRINT
+   ───────────────────────────────────────────── */
+@media print{
+  .topbar,.actions,.entry-links,.skip{display:none}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  .band{page-break-inside:avoid;border-color:#ccc}
+  .entry{border:1px solid #ccc;background:#fff}
+  a{text-decoration:none;color:#000}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="monogram" href="#top">EG<span class="dot">.</span></a>
+    <nav class="navlinks" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#stack" class="nav-hide">Stack</a>
+      <a href="#education" class="nav-hide">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="./Eklavya_Goyal_Resume.pdf" class="resume" download>Résumé</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══ HERO ══ -->
+<section class="shell hero" id="top">
+  <p class="eyebrow">Backend &middot; Android &middot; Full-stack</p>
+  <h1>Rishabh Jain</h1>
+  <p class="lede">
+    Third-year Computer Science undergraduate at <strong>VIT Vellore</strong>. I build end-to-end
+    systems — a Bluetooth mesh network that keeps working when the cell towers do not, an IoT
+    platform that reads sensors and acts on them, a pipeline that ships all of it. Currently
+    writing REST services with Spring Boot and joining <strong>American Express</strong> as an
+    <strong>incoming Software Engineering Intern for Summer 2027</strong>.
+  </p>
+
+  <dl class="spec">
+    <div><dt>CGPA</dt><dd>9.69 <span class="unit">/ 10.0</span></dd></div>
+    <div><dt>Programme</dt><dd>B.Tech CSE <span class="unit">2024–28</span></dd></div>
+    <div><dt>Core languages</dt><dd>Java <span class="unit">· Python · C++</span></dd></div>
+    <div><dt>Incoming</dt><dd>SWE Intern <span class="unit">· Amex · Summer 2027</span></dd></div>
+  </dl>
+
+  <div class="actions">
+    <a class="btn primary" href="mailto:eklavyagoyal108@gmail.com">Get in touch</a>
+    <a class="btn" href="./Eklavya_Goyal_Resume.pdf" download>Download résumé</a>
+    <a class="btn" href="https://github.com/EklavyaGoyal17" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<!-- ══ WORK ══ -->
+<section class="band" id="work">
+  <div class="shell band-grid">
+    <div class="band-meta">
+      <h2>Selected work</h2>
+      <p>Three shipped systems.<br>Code linked on each.</p>
+    </div>
+
+    <div class="work">
+
+      <article class="entry rise">
+        <div class="entry-top">
+          <h3>MeshSOS</h3>
+          <span class="when">Feb 2026 — present</span>
+        </div>
+        <p class="stackline">Java · Android SDK · Bluetooth Low Energy · SQLite · Firebase</p>
+        <ul>
+          <li>Native Android app that relays distress messages <strong>device to device over BLE</strong>, staying fully functional with no cellular or Wi-Fi connectivity.</li>
+          <li>Implemented BLE advertising and scanning with a <strong>custom packet format and TTL-based forwarding</strong>, so a message hops onward instead of dying at the first out-of-range device.</li>
+          <li>Offline-first SQLite layer queues GPS coordinates and payloads locally, then syncs to Firebase on reconnect — no message is lost while the network is down.</li>
+          <li>High-contrast accessible UI with runtime localization and a hands-free voice trigger, built for people using it under stress.</li>
+        </ul>
+        <div class="readout">
+          <span><b>~50 m</b> peer discovery</span>
+          <span><b>3-hop</b> relay in field tests</span>
+          <span><b>&lt;3 s</b> time-to-send</span>
+        </div>
+        <div class="entry-links">
+          <a href="https://github.com/EklavyaGoyal17/MeshSOS" target="_blank" rel="noopener">View source ↗</a>
+        </div>
+      </article>
+
+      <article class="entry rise">
+        <div class="entry-top">
+          <h3>Smart City Indoor Air-Quality Platform</h3>
+          <span class="when">Mar 2026</span>
+        </div>
+        <p class="stackline">React.js · Node.js · Express · REST API · C++ · ESP32</p>
+        <ul>
+          <li>Full-stack IoT platform aggregating live telemetry from multiple sensor nodes into a <strong>React dashboard served by a Node/Express REST API</strong>.</li>
+          <li>Programmed an ESP32 in C++ to sample an MQ-135 sensor every 5 seconds and actuate a 5V ventilation relay once AQI crosses a configurable threshold — the system responds, it does not just display.</li>
+          <li>Integrated the Open-Meteo API to overlay six or more weather parameters on sensor readings for context.</li>
+          <li>Tuned the JSON-over-HTTP pipeline to keep sensor-to-dashboard latency under two seconds on LAN.</li>
+        </ul>
+        <div class="readout">
+          <span><b>5 s</b> sampling interval</span>
+          <span><b>&lt;2 s</b> sensor-to-dashboard</span>
+          <span><b>6+</b> weather parameters</span>
+        </div>
+        <div class="entry-links">
+          <a href="https://github.com/EklavyaGoyal17/SmartCity-IAQ-Node" target="_blank" rel="noopener">View source ↗</a>
+        </div>
+      </article>
+
+      <article class="entry rise">
+        <div class="entry-top">
+          <h3>Containerized CI/CD Deployment Pipeline</h3>
+          <span class="when">2026</span>
+        </div>
+        <p class="stackline">Docker · Kubernetes · Jenkins · Git · Grafana</p>
+        <ul>
+          <li>Containerized a multi-service web application with Docker and authored declarative <strong>Kubernetes manifests</strong> (Deployments, Services) for reproducible rollout.</li>
+          <li>Automated build, test and deploy through a <strong>Jenkins declarative pipeline</strong> triggered on Git commits, replacing manual deployment with one repeatable workflow.</li>
+          <li>Instrumented the deployment with Grafana dashboards and health checks to surface service availability and resource metrics after each release.</li>
+        </ul>
+        <div class="readout">
+          <span><b>Commit-triggered</b> builds</span>
+          <span><b>Declarative</b> K8s manifests</span>
+          <span><b>Post-release</b> monitoring</span>
+        </div>
+        <div class="entry-links">
+          <a href="https://github.com/EklavyaGoyal17/techportal" target="_blank" rel="noopener">View source ↗</a>
+        </div>
+      </article>
+
+      <div class="archive">
+        <div class="archive-row">
+          <a href="https://github.com/EklavyaGoyal17/Travel-Tourism-Web-Portal" target="_blank" rel="noopener">Travel &amp; Tourism Web Portal</a>
+          <span>Responsive React SPA — reusable components, React Router, CSS Grid/Flexbox layout with no UI framework.</span>
+          <span class="when">Jan 2025</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ STACK ══ -->
+<section class="band" id="stack">
+  <div class="shell band-grid">
+    <div class="band-meta">
+      <h2>Technical stack</h2>
+      <p>Grouped by where<br>it gets used.</p>
+    </div>
+
+    <dl class="stack">
+      <div class="stack-row rise">
+        <dt>Languages</dt>
+        <dd>Java, C++, C, Python, JavaScript (ES6+), SQL, HTML5, CSS3</dd>
+      </div>
+      <div class="stack-row rise">
+        <dt>Backend &amp; APIs</dt>
+        <dd>Spring Boot <em>(learning)</em>, Node.js, Express.js, REST API design, JSON, JDBC, Postman</dd>
+      </div>
+      <div class="stack-row rise">
+        <dt>Frontend</dt>
+        <dd>React.js, React Router, Hooks, responsive CSS (Flexbox, Grid)</dd>
+      </div>
+      <div class="stack-row rise">
+        <dt>Mobile</dt>
+        <dd>Android SDK (Java), Bluetooth Low Energy, SQLite, Firebase (Auth, Realtime DB)</dd>
+      </div>
+      <div class="stack-row rise">
+        <dt>Databases</dt>
+        <dd>MySQL, SQLite, Firebase Realtime DB <em>— schema design, normalization, indexing</em></dd>
+      </div>
+      <div class="stack-row rise">
+        <dt>DevOps &amp; tools</dt>
+        <dd>Git, GitHub, Docker, Jenkins, CI/CD, Linux (CLI), IntelliJ IDEA, Android Studio, VS Code</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ══ EDUCATION ══ -->
+<section class="band" id="education">
+  <div class="shell band-grid">
+    <div class="band-meta">
+      <h2>Education</h2>
+      <p>VIT Vellore<br>Aug 2024 — May 2028</p>
+    </div>
+
+    <div>
+      <div class="edu">
+        <div class="edu-row rise">
+          <div class="entry-top">
+            <h3>Vellore Institute of Technology</h3>
+            <span class="when">Aug 2024 — May 2028</span>
+          </div>
+          <p>B.Tech, Computer Science and Engineering — Vellore, India</p>
+          <div class="marks">
+            <span>CGPA <b>9.69 / 10.0</b> (4 semesters)</span>
+            <span>Class XII, CBSE <b>95.8%</b></span>
+            <span>Class X, GSEB <b>94.0%</b></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="coursework">
+        <b>Relevant coursework</b>
+        Data Structures &amp; Algorithms · Object-Oriented Programming · Database Management Systems ·
+        Operating Systems · Computer Networks · Computer Architecture · Theory of Computation ·
+        Software Engineering (Agile/DevOps)
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CERTIFICATIONS ══ -->
+<section class="band" id="achievements">
+  <div class="shell band-grid">
+    <div class="band-meta">
+      <h2>Certifications</h2>
+      <p>&amp; problem solving</p>
+    </div>
+
+    <div class="edu">
+      <div class="edu-row rise">
+        <div class="entry-top">
+          <h3>DevOps, Agile and Design Thinking</h3>
+          <span class="when">Jul 2026</span>
+        </div>
+        <p>IBM Career Education Program — IBM Developer Skills Network</p>
+      </div>
+      <div class="edu-row rise">
+        <div class="entry-top">
+          <h3>Algorithmic problem solving</h3>
+          <span class="when">Ongoing</span>
+        </div>
+        <p>150+ problems solved on LeetCode — arrays, strings, trees, graphs, dynamic programming, sliding window.</p>
+        <div class="marks">
+          <span>LeetCode <b>150+ solved</b></span>
+          <span>HackerRank <b>5★ Java, Python, SQL</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="band contact" id="contact">
+  <div class="shell">
+    <h2>Let's talk</h2>
+    <p>
+      I'll be joining American Express as a SWE intern in Summer 2027. If you want to talk about
+      mesh networking, Spring Boot, or anything else here — email is the fastest way to reach me.
+    </p>
+    <div class="channels">
+      <a href="mailto:eklavyagoyal108@gmail.com">
+        <span class="label">Email</span><span class="val">eklavyagoyal108@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/eklavya-goyal-9b2aa0309" target="_blank" rel="noopener">
+        <span class="label">LinkedIn</span><span class="val">in/eklavya-goyal ↗</span>
+      </a>
+      <a href="https://github.com/EklavyaGoyal17" target="_blank" rel="noopener">
+        <span class="label">GitHub</span><span class="val">EklavyaGoyal17 ↗</span>
+      </a>
+      <a href="https://leetcode.com/u/eklavya_goyal/" target="_blank" rel="noopener">
+        <span class="label">LeetCode</span><span class="val">eklavya_goyal ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="shell">
+  <span>Rishabh Jain &middot; Vellore, Tamil Nadu, India</span>
+  <span>Last updated July 2026</span>
+</footer>
+
+<script>
+(function () {
+  var items = document.querySelectorAll('.rise');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduced || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  items.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rishabh Jain",
+  "url": "https://rishabhjaincodes.github.io/",
+  "email": "mailto:eklavyagoyal108@gmail.com",
+  "jobTitle": "Incoming Software Engineering Intern",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "American Express"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Vellore Institute of Technology"
+  },
+  "knowsAbout": ["Java", "Spring Boot", "Android", "React.js", "Node.js", "Docker", "Kubernetes", "Data Structures and Algorithms"],
+  "sameAs": [
+    "https://github.com/EklavyaGoyal17",
+    "https://www.linkedin.com/in/eklavya-goyal-9b2aa0309",
+    "https://leetcode.com/u/eklavya_goyal/"
+  ]
+}
+</script>
+</body>
+</html>
