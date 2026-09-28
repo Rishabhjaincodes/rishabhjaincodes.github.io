@@ -595,10 +595,41 @@ footer{
 
 </main>
 
+<footer class="shell footer-centered">
+  <div>&copy; <span id="year"></span> Rishabh Jain. All Rights Reserved.</div>
+  <div class="footer-sub"> India</div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+footer.footer-centered {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0 2.5rem;
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  color: var(--slate);
+
+  /* Centering Properties */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: .4rem;
+}
+
+.footer-sub {
+  font-size: .65rem;
+  opacity: 0.85;
+}
+
 <!--<footer class="shell">
   <span>Rishabh Jain &middot; India</span>
   <span>Copyright 2026 Rishabh Jain</span>
-</footer> -->
+</footer> 
 
 <footer>
   <span>&copy; <span id="year"></span> Rishabh Jain. All Rights Reserved.</span>
@@ -606,7 +637,7 @@ footer{
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+</script> -->
 
 <script>
 (function () {
