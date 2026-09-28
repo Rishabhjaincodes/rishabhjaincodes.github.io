@@ -363,6 +363,29 @@ footer{
   .entry{border:1px solid #ccc;background:#fff}
   a{text-decoration:none;color:#000}
 }
+
+footer.footer-centered {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0 2.5rem;
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  color: var(--slate);
+
+  /* Centering Properties */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: .4rem;
+}
+
+.footer-sub {
+  font-size: .65rem;
+  opacity: 0.85;
+}
+   
 </style>
 </head>
 
@@ -603,28 +626,6 @@ footer{
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
-footer.footer-centered {
-  border-top: 1px solid var(--rule);
-  padding: 2rem 0 2.5rem;
-  font-family: var(--mono);
-  font-size: .72rem;
-  letter-spacing: .06em;
-  color: var(--slate);
-
-  /* Centering Properties */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: .4rem;
-}
-
-.footer-sub {
-  font-size: .65rem;
-  opacity: 0.85;
-}
 
 <!--<footer class="shell">
   <span>Rishabh Jain &middot; India</span>
